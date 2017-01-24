@@ -1,5 +1,19 @@
 =mysql2xxxx
 
+==Install
+The following step will work on Ubuntu 14-16 installations.
+
+    sudo apt-get install ruby ruby-dev
+    sudo gem install bundler
+
+    git clone https://github.com/inkrement/mysql2xxxx.git
+    cd mysql2xxxx
+    bundler install
+    ./bin/mysql2csv --help
+
+==Usage
+   ./bin/mysql2csv -d databasename -e "select * from tablename" -uroot > /path/to/csv/file.csv 
+
 ==Binaries
 
     mysql2csv --user=dbuser --password=dbpassword --database=dbname --execute="select * from automobile_makes"
